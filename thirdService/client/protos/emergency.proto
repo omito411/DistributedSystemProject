@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package emergency;
+
+service EmergencyService {
+    rpc getSpecificService(ServiceRequest) returns (stream ServiceResponse) {}
+}
+
+message ServiceRequest {
+}
+
+message ServiceResponse {
+    string serviceType = 1;
+    string specificService = 2;
+}

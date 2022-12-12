@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package emergency;
+
+service Emergency {
+  rpc getInfo (EmergencyRequest) returns (EmergencyResponse) {}
+}
+
+message EmergencyRequest {
+}
+
+message EmergencyResponse {
+    string name = 1;
+    string detail = 2;
+}
+

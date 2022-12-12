@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package serviceList;
+
+service ServiceList{
+    rpc totalServiceList (stream Service) returns (List) {}
+}
+
+message Service{
+    string service = 1;
+    string serviceType = 2;
+    int32 total = 3;
+}
+
+message List {
+    int32 services = 1;
+    int32 total = 2;
+}
